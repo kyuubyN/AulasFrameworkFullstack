@@ -2,4 +2,4 @@
 
 
 Repositorio criado para as aulas de frameworks
-Somente para uso educanional
+Somente para uso educacional
