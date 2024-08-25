@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Berserk - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=512&id=y8q66v6ExjBy&format=png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex; flex-direction: column;">
+            <a class="navbar-brand" href="#"><img src="../static/Berserk_anime_logo.png" alt=""></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Drop Black Swordsman</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lanc">Lançamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Destaques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Masculino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feminino</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inverno 2024</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="buscar">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <div class="iconPerfil">
+                <a href=""><img src="../static/icons8-usuário-48.png" alt=""></a>
+            </div>
+            <div class="iconCart">
+                <a href=""><img src="../static/icons8-carrinho-de-compras-48.png" alt=""></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="background1">
+            <video src="../static/Berserk 2023 trailer _ 4k 60fps.mp4" autoplay loop muted class="videobackg"></video>
+            <img src="../static/Berserk_anime_logo.png" alt="" class="superiorBkg">
+        </div>
+        <section>
+            <br><br>
+            <hr>
+            <h4 style="text-align: center;" id="lanc">Lançamentos</h4>
+            <br><br>
+            <div class="container d-flex flex-wrap">
+                {% for cat in catal %}
+                <div class="cardshop col-md-4">
+                    <ul style="list-style: none;">
+                        <li class="card1">
+                            <img src="{{cat.Imagem}}" alt="">
+                            <div class="texto-produto">
+                                <p>{{cat.Produto}}</p>
+                                <span><b>{{cat.Preço}}</b></span>
+                                <br>
+                                <button class="button1">Comprar</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>Created by: Kaue Oliveira. Wh3r3 1s my m1nd?</p>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>$('.carousel').carousel({
+            interval: 2000
+        })</script>
+    <script src="../static/script.js"></script>
+</body>
+
+</html>

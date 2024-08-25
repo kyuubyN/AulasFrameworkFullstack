@@ -1,0 +1,315 @@
+.navbar-brand img {
+    height: 80px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column !important;
+}
+
+.iconPerfil img {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    right: 90px;
+    height: 30px;
+    width: auto;
+    top: 60px;
+}
+
+.iconCart img {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    right: 50px;
+    height: 30px;
+    width: auto;
+    top: 60px;
+}
+
+li a:hover {
+    color: red !important;
+}
+
+li a {
+    font-size: 20px !important;
+    left: 30px !important;
+    position: relative;
+}
+
+#imgpanel {
+    height: 800px;
+    width: auto;
+}
+
+header {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+.epcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.anuncio {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .epcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .epcontainer .card {
+        margin: 50px;
+    }
+
+    .anuncio {
+        width: 300px !important;
+    }
+
+    .anuncio h5 {
+        font-size: 12px;
+    }
+
+    #formulario {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        left: -30px;
+    }
+}
+
+.nextparade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -30px;
+    position: relative;
+
+}
+
+.sobrenos {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.containerCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row !important;
+}
+
+.background1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.background1 video {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.superiorBkg {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    background-color: black !important;
+    color: white !important;
+}
+
+.navbar-nav {
+    left: -30px;
+    position: relative;
+}
+
+.nav-link {
+    font-size: 16px !important;
+}
+
+.navbar.bg-body-tertiary {
+    background: none !important;
+}
+
+.btn.btn-outline-success {
+    border: 1px red solid !important;
+    color: red !important;
+}
+
+.btn.btn-outline-success:hover {
+    background-color: rgba(255, 0, 0, 0.267) !important;
+}
+
+.form-control.me-2 {
+    background-color: #090808;
+    border: #1e1a1a 1px solid;
+    color: white !important;
+}
+
+.buscar {
+    position: absolute;
+    align-items: start;
+    left: 0;
+    display: flex;
+    width: 40dvw;
+    top: 40px;
+}
+
+
+.container .cardshop img {
+    height: 350px;
+    width: 25dvw;
+    object-fit: cover;
+}
+
+.container .cardshop img:hover {
+    cursor: pointer;
+    opacity: 90%;
+    transition: 0.1s;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.cardshop ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cardshop li {
+    margin: 20px;
+}
+
+.cardshop img {
+    max-width: 100%;
+    height: auto;
+}
+
+.texto-produto {
+    font-size: 14px;
+}
+
+.texto-produto span b {
+    font-size: 13px;
+    top: -10px !important;
+    position: relative;
+}
+
+.texto-produto .button1 {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    height: 32px;
+    width: 8dvw;
+    font-weight: bolder;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+    border-radius: 10px;
+}
+
+.cardshop .card1:hover .texto-produto .button1 {
+    visibility: visible !important;
+    opacity: 1;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000; 
+    border-radius: 10px; 
+    border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+html {
+    scrollbar-width: thin; 
+    scrollbar-color: #888 #000000; 
+}
+
+
+.elemento {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #000000;
+}
+
+
+@supports (-ms-overflow-style: none) {
+    ::-ms-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+}
