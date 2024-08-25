@@ -198,7 +198,7 @@ footer {
 
 .form-control.me-2 {
     background-color: #090808;
-    border: #1e1a1a 1px solid;
+    border: #aaa9a9 1px solid;
     color: white !important;
 }
 
@@ -312,4 +312,65 @@ html {
         width: 12px;
         height: 12px;
     }
+}
+
+::-webkit-input-placeholder {
+    color: rgb(236, 234, 234) !important;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    color: rgb(236, 234, 234) !important;  
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    color: rgb(236, 234, 234) !important;  
+ }
+ 
+ :-ms-input-placeholder {  
+    color: rgb(236, 234, 234) !important;  
+ }
+
+ .slider-container {
+    position: relative;
+    width: 90dvw; /* A largura é ajustada para caber 3 slides de 300px cada */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 300px; /* A largura de cada slide */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+}
+
+.slide img {
+    height: 350px !important;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ebe6e3;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 0px;
+}
+
+button.next {
+    right: 0px;
 }
