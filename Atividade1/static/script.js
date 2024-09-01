@@ -12,7 +12,7 @@ let currentSlide = 0;
 function showSlide(index) {
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
-    const visibleSlides = 3; // Número de slides visíveis de uma vez
+    const visibleSlides = 3;
 
     if (index >= totalSlides / visibleSlides) {
         currentSlide = 0;
@@ -39,27 +39,27 @@ function prevSlide() {
 
 let currentSlide2 = 0;
 
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slide2');
-    const totalSlides = slides.length;
-    const visibleSlides = 3; // Número de slides visíveis de uma vez
+function showSlide2(index) {
+    const slides2 = document.querySelectorAll('.slide2');
+    const totalSlides2 = slides2.length;
+    const visibleSlides2 = 3;
 
-    if (index >= totalSlides / visibleSlides) {
-        currentSlide = 0;
+    if (index >= totalSlides2 / visibleSlides2) {
+        currentSlide2 = 0;
     } else if (index < 0) {
-        currentSlide = Math.floor((totalSlides - 1) / visibleSlides);
+        currentSlide2 = Math.floor((totalSlides2 - 1) / visibleSlides2);
     } else {
-        currentSlide = index;
+        currentSlide2 = index;
     }
 
-    const slider = document.querySelector('.slider2');
-    slider.style.transform = `translateX(-${currentSlide * 100 / visibleSlides}%)`;
+    const slider2 = document.querySelector('.slider2');
+    slider2.style.transform = `translateX(-${currentSlide2 * 100 / visibleSlides2}%)`;
 }
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
+function nextSlide2() {
+    showSlide2(currentSlide2 + 1);
 }
 
-function prevSlide() {
-    showSlide(currentSlide - 1);
+function prevSlide2() {
+    showSlide2(currentSlide2 - 1);
 }
