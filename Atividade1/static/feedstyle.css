@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-h4 {
-    text-align: center;
-}
+
 .navbar-brand img {
     height: 80px;
     position: relative;
@@ -280,18 +278,18 @@ footer {
 
 
 ::-webkit-scrollbar {
-    width: 12px; 
+    width: 12px;
     height: 12px;
 }
 
 ::-webkit-scrollbar-track {
     background: #000000;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #000000; 
-    border-radius: 10px; 
+    background-color: #000000;
+    border-radius: 10px;
     border: 2px solid #f1f1f1;
 }
 
@@ -300,8 +298,8 @@ footer {
 }
 
 html {
-    scrollbar-width: thin; 
-    scrollbar-color: #888 #000000; 
+    scrollbar-width: thin;
+    scrollbar-color: #888 #000000;
 }
 
 
@@ -320,23 +318,26 @@ html {
 
 ::-webkit-input-placeholder {
     color: rgb(236, 234, 234) !important;
- }
- 
- :-moz-placeholder { /* Firefox 18- */
-    color: rgb(236, 234, 234) !important;  
- }
- 
- ::-moz-placeholder {  /* Firefox 19+ */
-    color: rgb(236, 234, 234) !important;  
- }
- 
- :-ms-input-placeholder {  
-    color: rgb(236, 234, 234) !important;  
- }
+}
 
- .slider-container {
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(236, 234, 234) !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(236, 234, 234) !important;
+}
+
+:-ms-input-placeholder {
+    color: rgb(236, 234, 234) !important;
+}
+
+.slider-container {
     position: relative;
-    width: 90dvw; /* A largura é ajustada para caber 3 slides de 300px cada */
+    width: 90dvw;
+    /* A largura é ajustada para caber 3 slides de 300px cada */
     overflow: hidden;
     margin: 0 auto;
 }
@@ -347,7 +348,8 @@ html {
 }
 
 .slide {
-    min-width: 300px; /* A largura de cada slide */
+    min-width: 300px;
+    /* A largura de cada slide */
     box-sizing: border-box;
     text-align: center;
     padding: 10px;
@@ -360,30 +362,43 @@ html {
     border-radius: 10px;
 }
 
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #ebe6e3;
-    color: white;
+
+
+.card ::-webkit-input-placeholder {
+    color: rgb(0, 0, 0) !important;
+}
+
+.card :-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(0, 0, 0) !important;
+}
+
+.card ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(0, 0, 0) !important;
+}
+
+.card :-ms-input-placeholder {
+    color: rgb(0, 0, 0) !important;
+}
+
+.card {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
     border: none;
-    padding: 10px;
-    cursor: pointer;
+    font-size: 12px;
+}
+.card button {
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
 }
 
-button.prev {
-    left: 0px;
-}
-
-button.next {
-    right: 0px;
-}
 body {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
-}
-
-.card2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

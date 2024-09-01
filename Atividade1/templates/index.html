@@ -8,6 +8,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="https://img.icons8.com/?size=512&id=y8q66v6ExjBy&format=png" type="image/x-icon">
 </head>
 
@@ -69,7 +71,7 @@
         <section>
             <br><br>
             <hr>
-            <h4 style="text-align: center;" id="lanc">Lançamentos</h4>
+            <h4 id="lanc">Lançamentos</h4>
             <br><br>
             <div class="container d-flex flex-wrap">
                 {% for cat in catal %}
@@ -92,102 +94,67 @@
         <hr>
         <br><br>
         <section>
-            <h4 style="text-align: center;">Destaques</h4>
+            <h4>Destaques</h4>
             <br><br>
             <div class="slider-container">
                 <div class="slider cardshop">
+                    {% for item in desta %}
                     <div class="slide card1">
-                        <img src="../static/CamisaDesta1.jpg" alt="Product 1">
+                        <img src="{{item.Imagem}}" alt="Product 1">
                         <div class="texto-produto" style="text-align: left;">
-                            <p>Camiseta Berserk Tales</p>
-                            <span><b>R$ 137,90</b></span>
+                            <p>{{ item.Produto }}</p>
+                            <span><b>{{ item.Preço }}</b></span>
                             <br>
                             <button class="button1">Comprar</button>
                         </div>
                     </div>
-                    <div class="slide card1">
-                        <img src="../static/CamisaDesta2.jpg" alt="Product 2">
-                        <div class="texto-produto" style="text-align: left;">
-                            <p>Moletom Eclipse</p>
-                            <span><b>R$ 189,90</b></span>
-                            <br>
-                            <button class="button1">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="slide card1">
-                        <img src="../static/CamisaDesta3.jpg" alt="Product 3">
-                        <div class="texto-produto" style="text-align: left;">
-                            <p>Camiseta Oversized Sacrifice</p>
-                            <span><b>R$ 119,90</b></span>
-                            <br>
-                            <button class="button1">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="slide card1">
-                        <img src="../static/CamisaDesta4.jpg" alt="Product 4">
-                        <div class="texto-produto" style="text-align: left;">
-                            <p>Camiseta Dragon Slayer</p>
-                            <span><b>R$ 130,90</b></span>
-                            <br>
-                            <button class="button1">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="slide card1">
-                        <img src="../static/CamisaDesta5.jpg" alt="Product 5">
-                        <div class="texto-produto" style="text-align: left;">
-                            <p>Camiseta Tr4sh Berserk</p>
-                            <span><b>R$ 119,90</b></span>
-                            <br>
-                            <button class="button1">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="slide card1">
-                        <img src="../static/CamisaDesta6.jpg" alt="Product 6">
-                        <div class="texto-produto" style="text-align: left;">
-                            <p>Camiseta Lovers Sacrifice</p>
-                            <span><b>R$ 119,90</b></span>
-                            <br>
-                            <button class="button1">Comprar</button>
-                        </div>
-                    </div>
-                    <div class="slide card1">
-                        <img src="../static/CamisaDesta7.jpg" alt="Product 7">
-                        <div class="texto-produto" style="text-align: left;">
-                            <p>Conjunto Caska Berserk</p>
-                            <span><b>R$ 359,90</b></span>
-                            <br>
-                            <button class="button1">Comprar</button>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
-                <button class="prev" onclick="prevSlide()"><img width="30px" height="30px" src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1" style="rotate: 180deg;"/></button>
-                <button class="next" onclick="nextSlide()"><img width="30px" height="30px" src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1"/></button>
+                <button class="prev" onclick="prevSlide()"><img width="30px" height="30px"
+                        src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1"
+                        style="rotate: 180deg;" /></button>
+                <button class="next" onclick="nextSlide()"><img width="30px" height="30px"
+                        src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1" /></button>
             </div>
-        
-
         </section>
-
-
+        <br><br>
+        <hr>
+        <br><br><br>
+        <section>
+            <h4>Avaliações</h4>
+            <br><br>
+            <div class="slider-container" style="display: flex; flex-direction: row !important;width: 100% !important;">
+                <div class="slider2 cardshop" style="justify-content: center; display: flex; flex-direction: row !important;" >
+                    {% for msge in avaliacoes %}
+                    <div class="slide2 card2">
+                        <div class="texto-produto" style="text-align: center;width: 200px;left: 100px;position: relative;">
+                            <p>{{ msge.nome }}</p>
+                            <span><b>{{ msge.msg }}</b></span>
+                            <br>
+                            {% for estrelas in range (msge.star) %}
+                            <img src="{{ estrela.Imagem }}" alt="" class="estrela" style="height: 20px !important; width: auto;">
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="prev" onclick="prevSlide()"><img width="30px" height="30px"
+                        src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1"
+                        style="rotate: 180deg;" /></button>
+                <button class="next" onclick="nextSlide()"><img width="30px" height="30px"
+                        src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1" /></button>
+            </div>
+        </section>
+        <br><br>
     </main>
     <footer>
         <div class="footer-content">
             <p>Created by: Kaue Oliveira. Wh3r3 1s my m1nd?</p>
-
+            <a href="/feedback" style="text-decoration: none;color: rgb(219, 191, 32);">
+                <p>Deixe sua avaliação!</p>
+            </a>
         </div>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
