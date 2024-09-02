@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{% block conteudo %}
+<br><br><br><br><br><br><br><br><br>
+<style>
+    footer {
+        position: fixed !important; bottom: 0 !important; margin: auto; width: 100%; 
+    }
+</style>
+    <main>
+        <div class="formularioFeedback">
+            <div class="card">
+            <form method="post" action="/criar">
+                <div class="inputArea">
+                <h4>Deixe seu feedback!</h4>
+                <br>
+                <span>Seu nome:</span>
+                <br>
+                <input type="text" name="nome" id="name" placeholder="" style="width: 500px;" required>
+                <br><br>
+                <span>Mensagem:</span>
+                <br>
+                <input type="text" name="feedback" id="feedback" placeholder="Gostei muito da loja!" style="width: 500px;" required>
+                <br>
+                <br>
+                <span>Quantas estrelas?</span>
+                <br>
+                <input type="radio" id="estrela1" name="estrelas" value="1">
+                <label for="estrela1">1</label>
+                
+                <input type="radio" id="estrela2" name="estrelas" value="2">
+                <label for="estrela2">2</label>
+                
+                <input type="radio" id="estrela3" name="estrelas" value="3">
+                <label for="estrela3">3</label>
+                
+                <input type="radio" id="estrela4" name="estrelas" value="4">
+                <label for="estrela4">4</label>
+                
+                <input type="radio" id="estrela5" name="estrelas" value="5">
+                <label for="estrela5">5</label>
+            </div>
+            <br>
+            <button type="submit">Enviar Feedback</button>
+            </form>
+        </div>
+        </div>
+    </main>
+{% endblock conteudo %}
