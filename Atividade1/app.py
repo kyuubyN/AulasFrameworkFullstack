@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, redirect  # type: ignore
+from flask import Flask, render_template # type: ignore
+from controller.bp import lista, criar_bp
 
-lista = []
 app = Flask(__name__)
 
+app.register_blueprint(criar_bp)
+
 estrelaimg = {'Imagem': 'https://img.icons8.com/fluency/48/star--v1.png'}
-
-
 
 catalogo = [
         {
@@ -79,7 +79,7 @@ dest = [
         }
     ]
 
-
+titleindex = "Berserk Store - Inicio"
 @app.route("/")
 def index():
     return render_template(
@@ -91,21 +91,8 @@ def index():
 def feedback():
     return render_template("feedback.html")
 
-
-class Aval:
-    def __init__(self, nome, msg, star):
-        self.nome = nome
-        self.msg = msg
-        self.star = star
-
-@app.route("/criar", methods=['POST', ])
-def criar():
-    nome = request.form['nome']
-    msg = request.form['feedback']
-    star = request.form['estrelas']
-    starint = int(star)
-    aval = Aval(nome, msg, starint)
-    lista.append(aval)
-    return redirect('/')
+@app.route("/base")
+def base():
+    return render_template("base.html", title=titleindex)
 
 app.run(debug=True)

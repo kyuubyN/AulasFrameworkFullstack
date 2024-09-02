@@ -387,3 +387,38 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.formularioFeedback .card ::-webkit-input-placeholder {
+    color: rgb(0, 0, 0) !important;
+}
+
+.formularioFeedback .card :-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(0, 0, 0) !important;
+}
+
+.formularioFeedback .card ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(0, 0, 0) !important;
+}
+
+.formularioFeedback .card :-ms-input-placeholder {
+    color: rgb(0, 0, 0) !important;
+}
+
+.formularioFeedback .card {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    border: none;
+    font-size: 12px;
+}
+.formularioFeedback .card button {
+    background-color: black;
+    color: white;
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
+}
