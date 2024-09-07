@@ -5,7 +5,7 @@ from controller.login import criar_bp_login, session, contas
 
 app = Flask(__name__)
 
-app.secret_key = 'teste'
+app.secret_key = 'test'
 
 app.register_blueprint(criar_bp_cad)
 
