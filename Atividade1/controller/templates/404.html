@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<style>
+    footer {
+        display: none;
+    }
+    header {
+        display: none;
+    }
+</style>
+<main>
+    <div class="containerError">
+        <p>
+            Opa... parece que você chegou em uma terra ainda desconhecida. <br><br>
+            Acho melhor <a href="/">retornar</a> ao mundo original.
+        </p>
+        <div class="imgError">
+            <img src="../../static/guts404.png" alt="">
+        </div>
+    </div>
+</main>
+
+{% endblock conteudo%}

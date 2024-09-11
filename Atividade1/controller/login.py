@@ -1,7 +1,6 @@
 from flask import Blueprint, request, redirect, session # type: ignore
 from controller.cadastro import dados_cadastro
 contas = dados_cadastro
-profiles = []
 
 criar_bp_login = Blueprint('logar', __name__, template_folder='templates')
 @criar_bp_login.route("/logar", methods=['POST'])

@@ -51,10 +51,6 @@ li a {
     position: relative;
 }
 
-#imgpanel {
-    height: 800px;
-    width: auto;
-}
 
 header {
     position: fixed;
@@ -66,40 +62,8 @@ header {
     box-sizing: content-box;
 }
 
-.epcontainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.anuncio {
-    width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
 
 @media screen and (min-width: 300px) and (max-width: 500px) {
-    .epcontainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .epcontainer .card {
-        margin: 50px;
-    }
-
-    .anuncio {
-        width: 300px !important;
-    }
-
-    .anuncio h5 {
-        font-size: 12px;
-    }
 
     #formulario {
         display: flex;
@@ -109,22 +73,6 @@ header {
         position: relative;
         left: -30px;
     }
-}
-
-.nextparade {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: -30px;
-    position: relative;
-
-}
-
-.sobrenos {
-    align-items: center;
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
 }
 
 footer {
@@ -222,7 +170,7 @@ footer {
     object-fit: cover;
 }
 
-.container .cardshop img:hover {
+.container .cardshop img:hover, .cardshop1 img:hover {
     cursor: pointer;
     opacity: 90%;
     transition: 0.1s;
@@ -276,6 +224,34 @@ footer {
 .cardshop .card1:hover .texto-produto .button1 {
     visibility: visible !important;
     opacity: 1;
+}
+.cardshop1 .card1:hover .texto-produto .button1 {
+    visibility: visible !important;
+    opacity: 1;
+}
+@media screen and (min-width:300px) and (max-width: 600px) {
+    .cardshop {
+        width: 100%;
+        align-items: center;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .card1 {
+            width: 100%;
+            img {
+                height: 300px;
+                width: auto;
+                margin: auto;
+                object-fit: cover;
+                max-width: 200px;
+            }
+            button {
+                width: auto;
+            }
+        }
+    }
+    
 }
 
 
@@ -422,3 +398,4 @@ body {
     width: 200px;
     border-radius: 5px;
 }
+
