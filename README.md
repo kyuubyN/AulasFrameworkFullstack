@@ -1,5 +1,5 @@
 # AulasFrameworkFullstack
 
 
-Repositorio criado para as aulas de frameworks
-Somente para uso educacional
+Repositorio criado para um projeto Full-stack.
+Utilizando para aula na faculdade e para aprender mais ferramentas.
