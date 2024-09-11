@@ -1,4 +1,4 @@
-document.addEventListener("visibilitychange", function() {
+document.addEventListener("visibilitychange", function () {
     var video = document.getElementById("backgroundVideo");
     if (document.hidden) {
         video.pause();
@@ -12,7 +12,9 @@ let currentSlide = 0;
 function showSlide(index) {
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
-    const visibleSlides = 3;
+    const visibleSlides = 2;
+
+    let translateValue = window.innerWidth >= 300 && window.innerWidth <= 600 ? 210 : 50;
 
     if (index >= totalSlides / visibleSlides) {
         currentSlide = 0;
@@ -23,7 +25,7 @@ function showSlide(index) {
     }
 
     const slider = document.querySelector('.slider');
-    slider.style.transform = `translateX(-${currentSlide * 100 / visibleSlides}%)`;
+    slider.style.transform = `translateX(-${currentSlide * translateValue / visibleSlides}%)`;
 }
 
 function nextSlide() {
@@ -33,7 +35,9 @@ function nextSlide() {
 function prevSlide() {
     showSlide(currentSlide - 1);
 }
-
+window.addEventListener('resize', () => {
+    showSlide(currentSlide);
+});
 
 
 
@@ -63,3 +67,11 @@ function nextSlide2() {
 function prevSlide2() {
     showSlide2(currentSlide2 - 1);
 }
+
+$('[name="estado"]').click(function () {
+
+    $('[name="cidades"] option').css('display', 'none');
+
+    $('[name="cidades"] .' + $(this).val()).css('display', '');
+
+});
