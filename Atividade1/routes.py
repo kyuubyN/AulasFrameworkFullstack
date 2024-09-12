@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, flash # type: ignore
 from controller.bp import lista, criar_bp
 from controller.cadastro import criar_bp_cad
 from controller.login import criar_bp_login, session, contas
-from controller.products import catalogo, dest, estrelaimg
+from controller.products import catalogo, dest, estrelaimg, criar_bp_produto, criar_bp_produto2, valorprod, valorprod2
 app = Flask(__name__)
 
 app.secret_key = 'teste'
@@ -12,6 +12,10 @@ app.register_blueprint(criar_bp_cad)
 app.register_blueprint(criar_bp)
 
 app.register_blueprint(criar_bp_login)
+
+app.register_blueprint(criar_bp_produto)
+
+app.register_blueprint(criar_bp_produto2)
 
 titleindex = "Berserk Store"
 class Routes():
@@ -66,3 +70,15 @@ class Routes():
     @app.route('/error')
     def error():
         return render_template('404.html', title=titleindex)
+    
+    @app.route('/product1')
+    def product1():
+        if valorprod:
+            return render_template('products.html', valpd=valorprod[-1])
+        return redirect('/') 
+
+    @app.route('/product2')
+    def product2():
+        if valorprod2:
+            return render_template('products2.html', valpd=valorprod2[-1])
+        return redirect('/')

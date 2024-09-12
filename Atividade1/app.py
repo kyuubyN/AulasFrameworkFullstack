@@ -1,4 +1,3 @@
-
 from routes import app, Routes
 
 Routes()
