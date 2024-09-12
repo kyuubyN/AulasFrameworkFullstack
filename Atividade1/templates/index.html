@@ -19,7 +19,10 @@
                                 <p>{{cat.Produto}}</p>
                                 <span><b>{{cat.Preço}}</b></span>
                                 <br>
+                                <form action="/goproduct" method="post">
+                                    <input type="number" style="display: none;" name="numberid" value="{{cat.id}}">
                                 <button class="button1">Comprar</button>
+                            </form>
                             </div>
                         </li>
                     </ul>
@@ -40,7 +43,9 @@
                             <p>{{ item.Produto }}</p>
                             <span><b>{{ item.Preço }}</b></span>
                             <br>
-                            <button class="button1">Comprar</button>
+                            <form action="/goproduct2" method="post">
+                                <input type="number" style="display: none;" name="numberid2" value="{{item.id}}">
+                            <button class="button1">Comprar</button></form>
                         </div>
                     </div>
                     {% endfor %}
