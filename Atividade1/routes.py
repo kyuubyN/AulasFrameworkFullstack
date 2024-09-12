@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, flash # type: ignore
 from controller.bp import lista, criar_bp
 from controller.cadastro import criar_bp_cad
 from controller.login import criar_bp_login, session, contas
+from controller.iconprofile import alterarIcon, imgMain
 from controller.products import catalogo, dest, estrelaimg, criar_bp_produto, criar_bp_produto2, valorprod, valorprod2
 app = Flask(__name__)
 
@@ -16,6 +17,8 @@ app.register_blueprint(criar_bp_login)
 app.register_blueprint(criar_bp_produto)
 
 app.register_blueprint(criar_bp_produto2)
+
+app.register_blueprint(alterarIcon)
 
 titleindex = "Berserk Store"
 class Routes():
@@ -58,7 +61,7 @@ class Routes():
         
             perfil_usuario = next((u for u in contas if u['email'] == email), None)
             if perfil_usuario:
-                return render_template('profile.html', perfil=perfil_usuario, title=titleindex)
+                return render_template('profile.html', perfil=perfil_usuario, title=titleindex, icon=imgMain)
             else:
                 flash('Usuário não encontrado', 'error')
                 return redirect('/login')

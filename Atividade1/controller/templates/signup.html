@@ -2,7 +2,10 @@
 {% block conteudo %}
 <style>
     footer {
-        position: fixed !important; bottom: 0 !important; margin: auto; width: 100%; 
+        position: fixed !important;
+        bottom: 0 !important;
+        margin: auto;
+        width: 100%;
     }
 </style>
 <!-- Separação do conteudo body -->
@@ -10,28 +13,29 @@
 <main>
     <div class="formularioFeedback">
         <div class="card">
-        <form method="post" action="/cadastrar">
-            <div class="inputArea">
-            <h4>Faça seu Cadastro!</h4>
-            <br>
-            <span>Nome:</span>
-            <br>
-            <input type="text" name="nome" id="nome"  style="width: 500px;" required minlength="4">
-            <br><br>
-            <span>Email:</span>
-            <br>
-            <input type="email" name="email" id="email" placeholder="seunome@mail.com" style="width: 500px;" required>
-            <br><br>
-            <span>Senha:</span>
-            <br>
-            <input type="password" name="senha" id="senha" placeholder="*******" style="width: 500px;" required>
-            <br>
+            <form method="post" action="/cadastrar">
+                <div class="inputArea">
+                    <h4>Faça seu Cadastro!</h4>
+                    <br>
+                    <span>Nome:</span>
+                    <br>
+                    <input type="text" name="nome" id="nome" style="width: 500px;" required minlength="4">
+                    <br><br>
+                    <span>Email:</span>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="seunome@mail.com" style="width: 500px;"
+                        required>
+                    <br><br>
+                    <span>Senha:</span>
+                    <br>
+                    <input type="password" name="senha" id="senha" placeholder="*******" style="width: 500px;" required>
+                    <br>
+                </div>
+                <br>
+                <button type="submit">Cadastrar</button>
+                <a href="/login" style="padding-left: 20px;color:black;text-decoration: none;">Logar-se</a>
+            </form>
         </div>
-        <br>
-        <button type="submit" >Cadastrar</button>
-        <a href="/login" style="padding-left: 20px;color:black;text-decoration: none;">Logar-se</a>
-        </form>
-    </div>
     </div>
 </main>
 {% endblock %}
