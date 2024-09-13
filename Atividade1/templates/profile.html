@@ -4,6 +4,9 @@
     footer {
         display: none;
     }
+    header {
+        z-index: 30 !important;
+    }
 
     .toast {
         position: fixed;
@@ -17,41 +20,111 @@
 <!---->
 <main>
     <br><br><br><br><br><br><br><br>
-    <div class="profile">
-        <div class="profileIcon">
-            <img src="{{ icon.Imagem }}" alt=""><br><br>
-            <form action="/icon" method="post">
-                <input type="file" name="arquivo" id="arquivo">
-                <button type="submit">Salvar</button>
-            </form>
+    <section>
+        <div class="profile">
+            <div class="profileIcon">
+                <img src="{{ icon.Imagem }}" alt=""><br><br>
+            </div>
+            <div>
+                <span style="font-size: 20px;padding-left: 50px;"><b>{{ perfil.nome }}</b></span><br><br>
+                <span style="padding-left: 50px;"><b>E-mail:</b> {{perfil.email }}</span><br><br>
+
+                <div class="boxEnd" style="z-index: 1070;">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop" style="background-color: black; border: 1px solid rgb(255, 255, 255);color: white; font-size: 13px;position: relative;left: 50px;">
+                        Editar informações
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Informações da conta.</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/icon" method="post">
+                                        <h5 style="text-align: start;">Alterar Imagem do perfil:</h5><br>
+                                        <input type="file" name="arquivo" id="arquivo"><br><br>
+                                        <button type="submit" class="btn btn-primary" style="font-size: 13px; background-color: black;border: 1px solid black;">Salvar</button>
+                                    </form><br><br>
+                                    <div class="containerEndereco">
+                                        <h5 style="text-align: start;position: relative;left: 50px;">Alterar endereço</h5>
+                                        <form action="/endereco" method="post">
+                    
+                                            <label for="">CEP: <br>
+                                                <input name="cep" type="text" id="cep" value="" size="20" maxlength="9"
+                                                    onblur="pesquisacep(this.value);" placeholder="00000-000" required /></label><br><br>
+                    
+                                            <label for="">Bairro: <br>
+                                                <input name="bairro" type="text" id="bairro" size="20" placeholder="Ex: Times Square"
+                                                    required /></label><br><br>
+                    
+                                            <label for="">Rua: <br>
+                                                <input name="rua" type="text" id="rua" size="20" placeholder="Ex: Rua da praça"
+                                                    required /></label><br><br>
+                    
+                                            <label for="">Cidade: <br>
+                                                <input type="text" name="cidade" id="cidade" maxlength="20" placeholder="Ex: Osasco"
+                                                    required></label><br><br>
+                    
+                                            <label for="">Estado: <br>
+                                                <input name="uf" type="text" id="uf" size="5" maxlength="2" required /></label><br><br>
+                    
+                                            <label for="">Numero: <br>
+                                                <input type="text" name="number" id="number" maxlength="5" placeholder="" size="5"
+                                                    required></label><br><br>
+                    
+                                            <button type="submit" class="btn btn-outline-success">Salvar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+            </div>
         </div>
-        <br>
+    </section>
+
+    <section>
         <p>
-            <span style="font-size: 20px;"><b>{{ perfil.nome }}</b></span><br><br>
-            <span><b>E-mail:</b> {{perfil.email }}</span><br>
-        <form action="" method="post">
-            <input name="cep" type="text" id="cep" value="" size="20" maxlength="9"
-                onblur="pesquisacep(this.value);" /><br><br>
-            <input name="bairro" type="text" id="bairro" size="20" /><br><br>
-            <input name="rua" type="text" id="rua" size="20" /><br><br>
-            <input type="text" name="cidade" id="cidade" maxlength="20" placeholder="Cidade"><br><br>
-            <input name="uf" type="text" id="uf" size="2" /><br><br>
-            <input type="number" name="number" id="number" maxlength="5" placeholder="Numero"><br><br>
-            <button type="submit" class="btn btn-outline-success">Salvar</button>
-
-        </form><br>
-        </p>
-
-    </div>
-    <div class="purchases">
-        <p>Compras recentes</p>
-        <div class="cardProfile">
-            <img src="../static/CamisaDesta1.jpg" alt="">
+        <div class="containerInfo">
+            {% for end in data %}
+            <h3>Seu endereço:</h3>
+            <p>Cep: <span>{{ end.cep }}</span><br></p>
+            <p>Bairro: <span>{{ end.bairro }}</span><br></p>
+            <p>Rua: <span>{{ end.rua }}</span><br></p>
+            <p>Cidade: <span>{{ end.cidade }}</span><br></p>
+            <p>Estado: <span>{{ end.estado }}</span><br></p>
+            <p>Numero: <span>{{ end.numero }}</span><br></p>
+            {% endfor %}
         </div>
-        <a href="/feedback" style="text-decoration: none;">
-            <span>Deixe sua avaliação!</span>
-        </a>
-    </div><br>
+        </p>
+    </section>
+
+    <section>
+        <div class="purchases">
+            <p>Compras recentes</p>
+            <div class="cardProfile">
+                <img src="../static/CamisaDesta1.jpg" alt="">
+            </div>
+            <a href="/feedback" style="text-decoration: none;">
+                <span>Deixe sua avaliação!</span>
+            </a>
+        </div><br>
+    </section>
+
 </main>
 <div class="toast" id="cep-toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
     <div class="toast-header">

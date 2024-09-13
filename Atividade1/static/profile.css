@@ -85,3 +85,8 @@
         }
     }
 }
+
+.containerInfo {
+    padding-left: 50px;
+    position: relative;
+}
