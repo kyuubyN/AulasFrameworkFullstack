@@ -4,6 +4,7 @@ from controller.cadastro import criar_bp_cad
 from controller.login import criar_bp_login, session, contas
 from controller.iconprofile import alterarIcon, imgMain
 from controller.products import catalogo, dest, estrelaimg, criar_bp_produto, criar_bp_produto2, valorprod, valorprod2
+from controller.dadosprofile import pegar_dados, endereco
 app = Flask(__name__)
 
 app.secret_key = 'teste'
@@ -19,6 +20,8 @@ app.register_blueprint(criar_bp_produto)
 app.register_blueprint(criar_bp_produto2)
 
 app.register_blueprint(alterarIcon)
+
+app.register_blueprint(pegar_dados)
 
 titleindex = "Berserk Store"
 class Routes():
@@ -61,7 +64,7 @@ class Routes():
         
             perfil_usuario = next((u for u in contas if u['email'] == email), None)
             if perfil_usuario:
-                return render_template('profile.html', perfil=perfil_usuario, title=titleindex, icon=imgMain)
+                return render_template('profile.html', perfil=perfil_usuario, title=titleindex, icon=imgMain, data=endereco)
             else:
                 flash('Usuário não encontrado', 'error')
                 return redirect('/login')

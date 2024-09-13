@@ -132,3 +132,5 @@ document.getElementById('close-toast').addEventListener('click', function () {
     var toastElement = document.getElementById('cep-toast');
     toastElement.style.display = 'none';
 });
+
+

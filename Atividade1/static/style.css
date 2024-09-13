@@ -54,7 +54,7 @@ li a {
 
 header {
     position: fixed;
-    z-index: 10000;
+    z-index: 1060;
     width: 100%;
 }
 
@@ -357,7 +357,9 @@ button.next {
 body {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
-
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
 .card2 {
     display: flex;
     justify-content: center;

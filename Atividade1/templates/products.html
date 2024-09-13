@@ -1,9 +1,75 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <p>
-        <img src="{{ valpd.Imagem }}" alt="Imagem do Produto" class="">
-        <h1>{{ valpd.Produto }}</h1>
-        <p>Preço: {{ valpd.Preço }}</p>
-    </p>
+<section class="sectProd">
+    <div class="containerProduto">
+        <div class="cardProduto">
+            <div class="containerImgProd">
+            <img src="{{ valpd.Imagem }}" alt="">
+            <div class="mini-Imagens">
+                {% for i in range(5) %}
+                <img src="{{ valpd.Imagem }}" alt="">
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+        <div class="text-product">
+            <p>
+                <h5>{{ valpd.Produto }}</h5><br>
+                <span>{{ valpd.Preço }}</span><span style="text-align: right; padding-left: 150px;">0x de R$00 sem juros.</span>
+            </p>
+            <form action="">
+                <div class="radio-container">
+                    <input type="radio" id="tamanho1" name="tamanho" value="1">
+                    <label for="tamanho1">P</label>
+            
+                    <input type="radio" id="tamanho2" name="tamanho" value="2">
+                    <label for="tamanho2">M</label>
+            
+                    <input type="radio" id="tamanho3" name="tamanho" value="3">
+                    <label for="tamanho3">G</label>
+            
+                    <input type="radio" id="tamanho4" name="tamanho" value="4">
+                    <label for="tamanho4">GG</label>
+            
+                    <input type="radio" id="tamanho5" name="tamanho" value="5">
+                    <label for="tamanho5">XGG</label>
+                </div>
+                <div class="productColor">
+                    <input type="radio" id="color1" name="color" value="5">
+                    <label for="color1">cor</label>
+            
+                    <input type="radio" id="color2" name="color" value="6">
+                    <label for="color2">cor</label>
+                </div>
+                <button type="submit">Comprar</button>
+            </form>
+            
+        </div>
+    </div>
+</section>
+<hr>
+    <section class="classificacoes">
+        <h3 style="text-align: center;padding-bottom: 50px;">Avaliações: </h3>
+        <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-64x64">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSElCRpfHlnG-mMg6efSHFB2AkMecw5uwGPyg&s" alt="Image" />
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content" style="text-align: center;">
+                  <p>
+                    <strong>Kaue Oliveira</strong><br> <small style="font-size: 10px;">@kyuubyn</small>
+                    <small style="font-size: 10px;">31m</small>
+                    <br><br>
+                    Adorei essa loja, achei tudo muito incrivel!!
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+    </section>
+
 {% endblock conteudo %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
