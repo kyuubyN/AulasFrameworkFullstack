@@ -16,8 +16,14 @@
         position: relative;
         width: 100%;
         top: -100px;
-        padding-left: 300px;
-        margin: auto;
+        padding-left: 200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        button {
+            width: clamp(10rem, 80%, 20rem);
+        }
     }
 
     span {
@@ -154,4 +160,36 @@
     display: flex;
 
     flex-direction: row;
+}
+@media screen and (min-width:300px) and (max-width: 1000px) {
+    .text-product {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0 auto;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        width: 80% !important;
+        button {
+            width: 50% !important;
+        }
+    }
+    .containerProduto {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .containerImgProd {
+        padding-bottom: 150px;
+        display: flex;
+        flex-direction: column;
+        .mini-Imagens {
+            flex-direction: row !important;
+            display: flex;
+        }
+    }
 }

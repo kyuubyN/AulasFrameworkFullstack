@@ -24,7 +24,7 @@ catalogo = [
     {
         "Produto": "Camiseta Revenge Oversized",
         "Preço": "R$ 157,99",
-        "Imagem": "https://www.indieapes.in/cdn/shop/files/1710852624_3480458_copy_2.jpg?v=1721852862",
+        "Imagem": "https://cdn.dooca.store/292/products/sg18-camiseta-berserk-aberta.jpg?v=1585144656&webp=0",
         "id": 4,
     },
     {

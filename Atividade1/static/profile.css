@@ -58,6 +58,7 @@
     height: 10px;
     top: -500px;
     left: -40px;
+    padding-top: 300px;
     p {
         position: relative;
         top: -170px;
@@ -75,7 +76,7 @@
 @media screen and (min-width: 300px) and (max-width: 700px) {
     .purchases {
         height: auto;
-        top: 0;
+        top: -150px;
         left: 0;
         display: flex;
         flex-direction: column;
@@ -83,10 +84,30 @@
             top: 0;
             left: 0;
         }
+        span {
+            top: 0;
+            left: 0;
+            padding-left: 400px !important;
+            top: -170px;
+            position: relative;
+        }
+    }
+    .containerInfo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        flex-direction: column;
+        position: relative;
+        top: -100px;
     }
 }
-
-.containerInfo {
-    padding-left: 50px;
-    position: relative;
+@media screen and (min-width: 710px) {
+    .containerInfo {
+        padding-left: 50px;
+        position: relative;
+        margin-top: -300px;
+        padding-bottom: 50px;
+    }
+    
 }

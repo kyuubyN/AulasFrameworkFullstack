@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+html {
+    scroll-behavior: smooth !important;
+}
 h4 {
     text-align: center;
 }
@@ -98,29 +102,45 @@ footer {
     flex-direction: row !important;
 }
 
-.background1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
+.carousel-inner {
+    padding-top: 135px;
+    max-height: none !important;
+    max-width: none !important;
+    img {
+        width: 100% !important;
+        height: 70vh !important;
+        max-height: none !important;
+        max-width: none !important;
+        object-fit: contain;
+    }
 }
-
-.background1 video {
-    width: 100%;
-    object-fit: cover;
-    position: relative;
+@media screen and (max-width: 1300px){
+    .carousel-inner {
+        padding-top: 0;
+    }
 }
-
-.superiorBkg {
-    position: absolute;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+@media screen and (max-width: 550px){
+    .carousel-inner {
+        padding-top: 145px;
+       img {
+        height: 20vh !important;
+        width: 50%;
+        object-fit: cover;
+        padding-top: 0;
+       }
+    }
+    .carousel-control-prev-icon {
+        position: relative;
+        top: 50px;
+      }
+      .carousel-control-next-icon {
+        top: 50px;
+        position: relative;
+      }
+      .texto-produto .button1 {
+        width: 80px !important;
+      }
 }
-
 .navbar.navbar-expand-lg.navbar-dark.bg-dark {
     background-color: black !important;
     color: white !important;
@@ -310,33 +330,33 @@ html {
     color: rgb(236, 234, 234) !important;  
  }
 
- .slider-container {
+ .slider1-container {
     position: relative;
-    width: 90dvw; /* A largura é ajustada para caber 3 slides de 300px cada */
+    width: 90dvw; 
     overflow: hidden;
     margin: 0 auto;
 }
 
-.slider {
+.slider1 {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.slide {
-    min-width: 300px; /* A largura de cada slide */
+.slide1 {
+    min-width: 300px; 
     box-sizing: border-box;
     text-align: center;
     padding: 10px;
 }
 
-.slide img {
+.slide1 img {
     height: 350px !important;
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-button.prev, button.next {
+button.preview, button.nextbtt {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -347,11 +367,11 @@ button.prev, button.next {
     cursor: pointer;
 }
 
-button.prev {
+button.preview {
     left: 0px;
 }
 
-button.next {
+button.nextbtt {
     right: 0px;
 }
 body {
