@@ -10,7 +10,7 @@ document.addEventListener("visibilitychange", function () {
 let currentSlide = 0;
 
 function showSlide(index) {
-    const slides = document.querySelectorAll('.slide');
+    const slides = document.querySelectorAll('.slide1');
     const totalSlides = slides.length;
     const visibleSlides = 2;
 
@@ -24,7 +24,7 @@ function showSlide(index) {
         currentSlide = index;
     }
 
-    const slider = document.querySelector('.slider');
+    const slider = document.querySelector('.slider1');
     slider.style.transform = `translateX(-${currentSlide * translateValue / visibleSlides}%)`;
 }
 

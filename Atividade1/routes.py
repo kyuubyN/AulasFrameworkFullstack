@@ -80,11 +80,11 @@ class Routes():
     @app.route('/product1')
     def product1():
         if valorprod:
-            return render_template('products.html', valpd=valorprod[-1])
+            return render_template('products.html', valpd=valorprod[-1], title=titleindex)
         return redirect('/') 
 
     @app.route('/product2')
     def product2():
         if valorprod2:
-            return render_template('products2.html', valpd=valorprod2[-1])
+            return render_template('products2.html', valpd=valorprod2[-1], title=titleindex)
         return redirect('/')
