@@ -5,20 +5,25 @@
     position: relative;
     left: 30px;
 }
+
 .profileIcon input {
     position: relative;
     left: 0px;
     font-size: 12px;
 }
-.profile p, .profile form {
+
+.profile p,
+.profile form {
     position: relative;
     left: 50px;
     width: 450px;
     font-size: 15px;
 }
+
 .profile button {
     position: relative;
 }
+
 .profile form ::-webkit-input-placeholder {
     color: rgb(0, 0, 0) !important;
 }
@@ -36,6 +41,7 @@
 .profile form :-ms-input-placeholder {
     color: rgb(0, 0, 0) !important;
 }
+
 .purchases .cardProfile img {
     height: 300px;
     width: auto;
@@ -43,11 +49,13 @@
     filter: contrast(30%);
     transition: 1s ease-in-out;
 }
+
 .purchases .cardProfile img:hover {
     filter: none;
     transition: 1s ease-in-out;
     cursor: pointer;
 }
+
 .purchases {
     margin: auto;
     position: relative;
@@ -59,6 +67,7 @@
     top: -500px;
     left: -40px;
     padding-top: 300px;
+
     p {
         position: relative;
         top: -170px;
@@ -66,6 +75,7 @@
         font-weight: bold;
         left: 170px;
     }
+
     a {
         position: relative;
         top: 180px;
@@ -73,6 +83,7 @@
         color: rgb(78, 78, 0);
     }
 }
+
 @media screen and (min-width: 300px) and (max-width: 700px) {
     .purchases {
         height: auto;
@@ -80,10 +91,12 @@
         left: 0;
         display: flex;
         flex-direction: column;
+
         p {
             top: 0;
             left: 0;
         }
+
         span {
             top: 0;
             left: 0;
@@ -92,6 +105,7 @@
             position: relative;
         }
     }
+
     .containerInfo {
         display: flex;
         align-items: center;
@@ -102,6 +116,7 @@
         top: -100px;
     }
 }
+
 @media screen and (min-width: 710px) {
     .containerInfo {
         padding-left: 50px;
@@ -109,5 +124,5 @@
         margin-top: -300px;
         padding-bottom: 50px;
     }
-    
+
 }

@@ -4,6 +4,7 @@
     footer {
         display: none;
     }
+
     header {
         z-index: 30 !important;
     }
@@ -31,7 +32,8 @@
                 <div class="boxEnd" style="z-index: 1070;">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop" style="background-color: black; border: 1px solid rgb(255, 255, 255);color: white; font-size: 13px;position: relative;left: 50px;">
+                        data-bs-target="#staticBackdrop"
+                        style="background-color: black; border: 1px solid rgb(255, 255, 255);color: white; font-size: 13px;position: relative;left: 50px;">
                         Editar informações
                     </button>
 
@@ -49,35 +51,39 @@
                                     <form action="/icon" method="post">
                                         <h5 style="text-align: start;">Alterar Imagem do perfil:</h5><br>
                                         <input type="file" name="arquivo" id="arquivo"><br><br>
-                                        <button type="submit" class="btn btn-primary" style="font-size: 13px; background-color: black;border: 1px solid black;">Salvar</button>
+                                        <button type="submit" class="btn btn-primary"
+                                            style="font-size: 13px; background-color: black;border: 1px solid black;">Salvar</button>
                                     </form><br><br>
                                     <div class="containerEndereco">
-                                        <h5 style="text-align: start;position: relative;left: 50px;">Alterar endereço</h5>
+                                        <h5 style="text-align: start;position: relative;left: 50px;">Alterar endereço
+                                        </h5>
                                         <form action="/endereco" method="post">
-                    
+
                                             <label for="">CEP: <br>
                                                 <input name="cep" type="text" id="cep" value="" size="20" maxlength="9"
-                                                    onblur="pesquisacep(this.value);" placeholder="00000-000" required /></label><br><br>
-                    
+                                                    onblur="pesquisacep(this.value);" placeholder="00000-000"
+                                                    required /></label><br><br>
+
                                             <label for="">Bairro: <br>
-                                                <input name="bairro" type="text" id="bairro" size="20" placeholder="Ex: Times Square"
-                                                    required /></label><br><br>
-                    
+                                                <input name="bairro" type="text" id="bairro" size="20"
+                                                    placeholder="Ex: Times Square" required /></label><br><br>
+
                                             <label for="">Rua: <br>
-                                                <input name="rua" type="text" id="rua" size="20" placeholder="Ex: Rua da praça"
-                                                    required /></label><br><br>
-                    
+                                                <input name="rua" type="text" id="rua" size="20"
+                                                    placeholder="Ex: Rua da praça" required /></label><br><br>
+
                                             <label for="">Cidade: <br>
-                                                <input type="text" name="cidade" id="cidade" maxlength="20" placeholder="Ex: Osasco"
-                                                    required></label><br><br>
-                    
+                                                <input type="text" name="cidade" id="cidade" maxlength="20"
+                                                    placeholder="Ex: Osasco" required></label><br><br>
+
                                             <label for="">Estado: <br>
-                                                <input name="uf" type="text" id="uf" size="5" maxlength="2" required /></label><br><br>
-                    
+                                                <input name="uf" type="text" id="uf" size="5" maxlength="2"
+                                                    required /></label><br><br>
+
                                             <label for="">Numero: <br>
-                                                <input type="text" name="number" id="number" maxlength="5" placeholder="" size="5"
-                                                    required></label><br><br>
-                    
+                                                <input type="text" name="number" id="number" maxlength="5"
+                                                    placeholder="" size="5" required></label><br><br>
+
                                             <button type="submit" class="btn btn-outline-success">Salvar</button>
                                         </form>
                                     </div>

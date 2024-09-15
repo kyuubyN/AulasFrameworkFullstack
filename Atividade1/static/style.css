@@ -3,9 +3,11 @@
 html {
     scroll-behavior: smooth !important;
 }
+
 h4 {
     text-align: center;
 }
+
 .navbar-brand img {
     height: 80px;
     position: relative;
@@ -106,6 +108,7 @@ footer {
     padding-top: 135px;
     max-height: none !important;
     max-width: none !important;
+
     img {
         width: 100% !important;
         height: 70vh !important;
@@ -114,33 +117,40 @@ footer {
         object-fit: contain;
     }
 }
-@media screen and (max-width: 1300px){
+
+@media screen and (max-width: 1300px) {
     .carousel-inner {
         padding-top: 0;
     }
 }
-@media screen and (max-width: 550px){
+
+@media screen and (max-width: 550px) {
     .carousel-inner {
         padding-top: 145px;
-       img {
-        height: 20vh !important;
-        width: 50%;
-        object-fit: cover;
-        padding-top: 0;
-       }
+
+        img {
+            height: 20vh !important;
+            width: 50%;
+            object-fit: cover;
+            padding-top: 0;
+        }
     }
+
     .carousel-control-prev-icon {
         position: relative;
         top: 50px;
-      }
-      .carousel-control-next-icon {
+    }
+
+    .carousel-control-next-icon {
         top: 50px;
         position: relative;
-      }
-      .texto-produto .button1 {
+    }
+
+    .texto-produto .button1 {
         width: 80px !important;
-      }
+    }
 }
+
 .navbar.navbar-expand-lg.navbar-dark.bg-dark {
     background-color: black !important;
     color: white !important;
@@ -190,7 +200,8 @@ footer {
     object-fit: cover;
 }
 
-.container .cardshop img:hover, .cardshop1 img:hover {
+.container .cardshop img:hover,
+.cardshop1 img:hover {
     cursor: pointer;
     opacity: 90%;
     transition: 0.1s;
@@ -245,10 +256,12 @@ footer {
     visibility: visible !important;
     opacity: 1;
 }
+
 .cardshop1 .card1:hover .texto-produto .button1 {
     visibility: visible !important;
     opacity: 1;
 }
+
 @media screen and (min-width:300px) and (max-width: 600px) {
     .cardshop {
         width: 100%;
@@ -257,8 +270,10 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         .card1 {
             width: 100%;
+
             img {
                 height: 300px;
                 width: auto;
@@ -266,28 +281,29 @@ footer {
                 object-fit: cover;
                 max-width: 200px;
             }
+
             button {
                 width: auto;
             }
         }
     }
-    
+
 }
 
 
 ::-webkit-scrollbar {
-    width: 12px; 
+    width: 12px;
     height: 12px;
 }
 
 ::-webkit-scrollbar-track {
     background: #000000;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #000000; 
-    border-radius: 10px; 
+    background-color: #000000;
+    border-radius: 10px;
     border: 2px solid #f1f1f1;
 }
 
@@ -296,8 +312,8 @@ footer {
 }
 
 html {
-    scrollbar-width: thin; 
-    scrollbar-color: #888 #000000; 
+    scrollbar-width: thin;
+    scrollbar-color: #888 #000000;
 }
 
 
@@ -316,23 +332,25 @@ html {
 
 ::-webkit-input-placeholder {
     color: rgb(236, 234, 234) !important;
- }
- 
- :-moz-placeholder { /* Firefox 18- */
-    color: rgb(236, 234, 234) !important;  
- }
- 
- ::-moz-placeholder {  /* Firefox 19+ */
-    color: rgb(236, 234, 234) !important;  
- }
- 
- :-ms-input-placeholder {  
-    color: rgb(236, 234, 234) !important;  
- }
+}
 
- .slider1-container {
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgb(236, 234, 234) !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgb(236, 234, 234) !important;
+}
+
+:-ms-input-placeholder {
+    color: rgb(236, 234, 234) !important;
+}
+
+.slider1-container {
     position: relative;
-    width: 90dvw; 
+    width: 90dvw;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -343,7 +361,7 @@ html {
 }
 
 .slide1 {
-    min-width: 300px; 
+    min-width: 300px;
     box-sizing: border-box;
     text-align: center;
     padding: 10px;
@@ -356,7 +374,8 @@ html {
     border-radius: 10px;
 }
 
-button.preview, button.nextbtt {
+button.preview,
+button.nextbtt {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -374,12 +393,15 @@ button.preview {
 button.nextbtt {
     right: 0px;
 }
+
 body {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
+
 * {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
+
 .card2 {
     display: flex;
     justify-content: center;
@@ -413,6 +435,7 @@ body {
     border: none;
     font-size: 12px;
 }
+
 .formularioFeedback .card button {
     background-color: black;
     color: white;
@@ -420,4 +443,3 @@ body {
     width: 200px;
     border-radius: 5px;
 }
-
