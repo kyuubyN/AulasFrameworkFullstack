@@ -3,15 +3,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     img {
         height: 600px;
         width: auto;
     }
+
     p {
         font-size: 20px;
         width: 180px;
         font-weight: bold;
     }
+
     a {
         color: red;
     }
@@ -21,10 +24,12 @@
     .containerError {
         display: flex;
         flex-direction: column;
+
         img {
             height: 300px;
             width: auto;
         }
+
         p {
             padding-top: 30px;
         }
