@@ -35,11 +35,11 @@ class Routes():
 
     @app.route("/feedback")
     def feedback():
-        return render_template("feedback.html", title=titleindex)
+        return render_template("feedback.html", title=titleindex, icon=imgMain)
 
     @app.route("/base")
     def base():
-        return render_template("base.html", title=titleindex)
+        return render_template("base.html", title=titleindex, icon=imgMain)
 
     @app.route("/login")
     def login():
