@@ -64,12 +64,12 @@
             </div>
             <div class="iconPerfil">
                 {% if 'user' in session %}
-                    <a href="/perfil"><img src="{{ url_for('static', filename='icons8-usuário-48.png') }}" alt="Perfil"></a>
+                <a href="/perfil"><img src="{{ url_for('static', filename='icons8-usuário-48.png') }}" alt="Perfil"></a>
                 {% else %}
-                    <a href="/login"><img src="{{ url_for('static', filename='icons8-usuário-48.png') }}" alt="Login"></a>
+                <a href="/login"><img src="{{ url_for('static', filename='icons8-usuário-48.png') }}" alt="Login"></a>
                 {% endif %}
             </div>
-            
+
 
             <div class="iconCart">
                 <a href=""><img src="../static/icons8-carrinho-de-compras-48.png" alt=""></a>
@@ -78,6 +78,13 @@
     </header>
     {% block conteudo %}
     {% endblock conteudo %}
+    <div class="whatsappButton">
+        <a href="/"><img src="https://cdn-icons-png.freepik.com/256/15707/15707917.png?semt=ais_hybrid" alt=""></a>
+    </div>
+    <div id="cookie-banner">
+        Ao navegar por este site <b>você aceita o uso de cookies</b> para agilizar a sua experiência de compra.
+        <button>Entendi</button>
+    </div>
     <footer>
         <div class="footer-content">
             <p>Created by: Kaue Oliveira.</p>
