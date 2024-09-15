@@ -202,7 +202,7 @@ footer {
 
 .container .cardshop img:hover,
 .cardshop1 img:hover {
-    cursor: pointer;
+    cursor: default;
     opacity: 90%;
     transition: 0.1s;
 }
@@ -250,6 +250,18 @@ footer {
     opacity: 0;
     transition: visibility 0.3s linear, opacity 0.3s linear;
     border-radius: 10px;
+}
+
+.button1:hover {
+    background-color: rgb(148, 2, 2);
+    transition: all 0.5s ease-in-out;
+}
+.logarbtn:hover , .cadbtn:hover {
+    background-color: rgb(148, 2, 2) !important;
+    transition: all 0.5s ease-in-out !important;
+}
+.logarbtn, .cadbtn {
+    transition: all 0.5s ease-in-out !important;
 }
 
 .cardshop .card1:hover .texto-produto .button1 {
@@ -442,4 +454,78 @@ body {
     height: 35px;
     width: 200px;
     border-radius: 5px;
+}
+.carousel-indicators button {
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 50% !important;
+}
+
+@media screen and (min-width:550px) and (max-width:690px) {
+    .carousel-indicators button {
+        top: -150px;
+        position: relative;
+    }
+}
+@media screen and (min-width:700px) and (max-width:850px) {
+    .carousel-indicators button {
+        top: -120px;
+        position: relative;
+    }
+}
+@media screen and (min-width:850px) and (max-width:1000px) {
+    .carousel-indicators button {
+        top: -100px;
+        position: relative;
+    }
+}
+@media screen and (min-width:1000px) and (max-width:1300px) {
+    .carousel-indicators button {
+        top: -50px;
+        position: relative;
+    }
+}
+@media screen and (max-width:500px) {
+    .inputArea input {
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .inputArea {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        flex-direction: column !important;
+    }
+    .loginArea {
+        position: relative;
+    }
+    .loginCard a {
+        position: relative;
+        top: 50px;
+        left: -120px;
+    }
+    .loginCard {
+        margin: 0 auto !important;
+        width: 100% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+            position: relative;
+            left: 45px;
+        }
+    }
+    .cadCard a {
+        position: relative;
+        top: 10px;
+        left: 50px;
+    }
 }

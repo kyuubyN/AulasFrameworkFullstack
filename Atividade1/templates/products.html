@@ -36,39 +36,110 @@
         </div>
         <div class="productColor">
           <input type="radio" id="color1" name="color" value="5">
-          <label for="color1">cor</label>
+          <label for="color1">{{ valpd.Cor }}</label>
 
-          <input type="radio" id="color2" name="color" value="6">
-          <label for="color2">cor</label>
+          <input type="radio" id="color2" name="color" value="6" disabled>
+          <label for="color2" style="background-color: #0a0a0a28;">Azul</label>
         </div>
         <button type="submit">Comprar</button>
       </form>
-
+      <!----------------------------------------------------------->
+      <div class="accordion accordion-flush" id="accordionFlushExample" style="width: clamp(2rem, 90%, 20rem);">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="background-color: none !important;
+    box-shadow: none !important;">
+              Meios de pagamento
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" style="background-color: none !important;
+    box-shadow: none !important;">
+            <div class="accordion-body">
+              <p>0 x de R$00,00 sem juros</p>
+              <a href="/error" style="font-size: 10px;color: black;text-decoration: none;">Ver mais detalhes</a>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="background-color: none !important;
+    box-shadow: none !important;">
+              Meios de envio
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" style="background-color: none !important;
+    box-shadow: none !important;">
+            <div class="accordion-body">
+              <label for=""><span style="font-size: 12px;">Frete grátis a partir de R$499,00 </span>
+                <form action=""><input type="text" placeholder="Seu CEP" required><br>
+              </label><button
+              style="background-color: black;color: white;width: 100px;border-radius: 0px;border: none;text-align: center;"
+              class="accordion-butn">Consultar</button></form>
+              <p><a href="https://buscacepinter.correios.com.br/app/endereco/index.php"
+                  style="font-size: 10px;color: black;text-decoration: none;">Não sei meu cep</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!----------------------------------------------------------->
     </div>
   </div>
 </section>
 <hr>
-<section class="classificacoes">
-  <h3 style="text-align: center;padding-bottom: 50px;">Avaliações: </h3>
-  <div class="box">
-    <article class="media">
-      <div class="media-left">
-        <figure class="image is-64x64">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSElCRpfHlnG-mMg6efSHFB2AkMecw5uwGPyg&s"
-            alt="Image" />
-        </figure>
-      </div>
-      <div class="media-content">
-        <div class="content" style="text-align: center;">
-          <p>
-            <strong>Kaue Oliveira</strong><br> <small style="font-size: 10px;">@kyuubyn</small>
-            <small style="font-size: 10px;">31m</small>
-            <br><br>
-            Adorei essa loja, achei tudo muito incrivel!!
-          </p>
+<section class="classificacoes container" style="display: flex;flex-direction: column;">
+  <h3 style="text-align: center;padding-bottom: 50px;">Comentarios: </h3>
+  <div class="ContainerClassific row">
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSElCRpfHlnG-mMg6efSHFB2AkMecw5uwGPyg&s"
+              alt="Image" />
+          </figure>
         </div>
-      </div>
-    </article>
+        <div class="media-content">
+          <div class="content" style="text-align: center;">
+            <p>
+              <strong>Kaue Oliveira</strong><br>
+              <br><br>
+              Essa loja é incrivel, comprarei mais!!
+            </p>
+            <div style="display: flex;flex-direction: row;" class="containerStar">
+              {% for i in range(4)%}
+              <img src="{{ estrela.Imagem }}" alt="" class="estrela" style="height: 20px !important; width: auto;">
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% for item in avaliacoes %}
+    <div class="box">
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-64x64">
+            <img src="{{ item.Icon }}" alt="Image" />
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content" style="text-align: center;">
+            <p>
+              <strong>{{ item.nome }}</strong><br>
+              <br><br>
+              {{ item.msg }}
+            </p>
+            <div style="display: flex;flex-direction: row;" class="containerStar">
+              {% for estrelas in range(item.star) %}
+              <img src="{{ estrela.Imagem }}" alt="" class="estrela" style="height: 20px !important; width: auto;">
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    {% endfor %}
   </div>
 </section>
 

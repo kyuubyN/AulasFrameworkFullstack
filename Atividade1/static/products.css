@@ -5,6 +5,17 @@
     }
 }
 
+.accordion {
+    padding-top: 50px;
+    border-color: black !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: none !important;
+    box-shadow: none !important;
+}
+
 .containerProduto {
     padding-top: 250px;
     display: flex;
@@ -15,7 +26,7 @@
     .text-product {
         position: relative;
         width: 100%;
-        top: -100px;
+        top: -50px;
         padding-left: 200px;
         margin: 0 auto;
         display: flex;
@@ -110,20 +121,20 @@
     padding-top: 80px;
 
     .box {
-        width: 500px;
+        width: clamp(2rem, 50%, 30rem);
         align-items: center;
         display: flex;
         justify-content: center;
         margin: 0 auto;
         border-radius: 0 !important;
+        color: rgb(0, 0, 0);
         /* From https://css.glass */
-        background: rgba(46, 42, 42, 0.19);
+        background: rgba(209, 200, 200, 0.226) !important;
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 0, 0, 0.18);
-        color: rgb(0, 0, 0) !important;
+        backdrop-filter: blur(7.8px);
+        -webkit-backdrop-filter: blur(7.8px);
+        border: 1px solid rgba(168, 158, 158, 0.3);
         padding: 40px;
 
         img {
@@ -159,7 +170,6 @@
 
 .containerImgProd {
     display: flex;
-
     flex-direction: row;
 }
 
@@ -177,8 +187,17 @@
         width: 80% !important;
 
         button {
-            width: 50% !important;
+            width: 100% !important;
         }
+    }
+
+    .accordion-body input::placeholder {
+        color: black !important;
+    }
+
+    .accordion-body label {
+        display: flex;
+        flex-direction: column;
     }
 
     .containerProduto {
@@ -186,6 +205,7 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        padding-top: 180px;
     }
 
     .containerImgProd {
@@ -198,4 +218,60 @@
             display: flex;
         }
     }
+
+    .accordion {
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100% !important;
+    }
+}
+
+.containerClassific {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+.containerStar {
+    width: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.ContainerClassific {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width:300px) and (max-width:600px) {
+    .ContainerClassific {
+        display: flex;
+        flex-direction: column !important;
+
+        .box {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (min-width:600px) {
+    .ContainerClassific {
+        .box {
+            margin: 20px !important;
+            width: 270px;
+            height: 350px;
+        }
+    }
+}
+.accordion-butn:hover, .text-product form button:hover {
+    background-color: rgb(148, 2, 2) !important;
+    transition: all 0.5s ease-in-out !important;
+}
+.accordion-butn, .text-product form button {
+    transition: all 0.5s ease-in-out !important;
 }

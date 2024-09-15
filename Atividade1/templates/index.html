@@ -33,7 +33,7 @@
         </button>
     </div>
     <section>
-        <br><br><br>
+        <br><br><br><br>
         <h4 id="lanc">Lançamentos</h4>
         <br><br>
         <div class="container d-flex flex-wrap">
@@ -65,7 +65,7 @@
             <div class="slider1 cardshop1">
                 {% for item in desta %}
                 <div class="slide1 card1">
-                    <img src="{{item.Imagem}}" alt="Product 1">
+                    <img src="{{item.Imagem}}" alt="Product 1" style="object-fit: cover;">
                     <div class="texto-produto" style="text-align: left;">
                         <p>{{ item.Produto }}</p>
                         <span><b>{{ item.Preço }}</b></span>

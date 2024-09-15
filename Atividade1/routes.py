@@ -2,8 +2,8 @@ from flask import Flask, render_template, redirect, flash # type: ignore
 from controller.bp import lista, criar_bp
 from controller.cadastro import criar_bp_cad
 from controller.login import criar_bp_login, session, contas
-from controller.iconprofile import alterarIcon, imgMain
-from controller.products import catalogo, dest, estrelaimg, criar_bp_produto, criar_bp_produto2, valorprod, valorprod2
+from controller.iconprofile import alterarIcon, imgMain, banco_de_img
+from controller.products import catalogo, dest, estrelaimg, criar_bp_produto, criar_bp_produto2, valorprod, valorprod2 
 from controller.dadosprofile import pegar_dados, endereco
 app = Flask(__name__)
 
@@ -80,11 +80,15 @@ class Routes():
     @app.route('/product1')
     def product1():
         if valorprod:
-            return render_template('products.html', valpd=valorprod[-1], title=titleindex)
+            for i, avaliacao in enumerate(lista):
+                avaliacao['Icon'] = banco_de_img[i % len(banco_de_img)]['Icon']
+            return render_template('products.html', valpd=valorprod[-1], title=titleindex, avaliacoes=lista, estrela=estrelaimg)
         return redirect('/') 
 
     @app.route('/product2')
     def product2():
         if valorprod2:
-            return render_template('products2.html', valpd=valorprod2[-1], title=titleindex)
+            for i, avaliacao in enumerate(lista):
+                avaliacao['Icon'] = banco_de_img[i % len(banco_de_img)]['Icon']
+            return render_template('products2.html', valpd=valorprod2[-1], title=titleindex, avaliacoes=lista, estrela=estrelaimg)
         return redirect('/')
