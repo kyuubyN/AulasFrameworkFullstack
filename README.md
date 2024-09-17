@@ -2,7 +2,10 @@
 O site foi inspirado e baseado por: <a href="https://www.alternazero.com/">Alternazero</a>
 
 <img src="https://cdn-icons-png.flaticon.com/512/1082/1082458.png" height="20"> Atenção!! Este site foi projetado na resolução de 1366x768 e resoluções mobile.
-Caso tenha algumas resoluções acima com alguns problemas, me avise na aba "Issues"
+Caso tenha algumas resoluções acima com alguns problemas, me avise na aba "Issues" <br><br>
+
+<img src="https://cdn-icons-png.flaticon.com/512/1082/1082458.png" height="20"> Atenção!! As imagens na aba do perfil estão pré-definidas, caso queira fazer um teste, utilize qualquer arquivo .jpeg que contenha o nome de "iconTeste" que ele vai pegar a iconTeste que está na pasta 'static/'.<br><br> Exemplo: "iconTeste.jpeg" = <br><img src="Atividade1/static/iconTeste.jpeg" height="100px"><br><br>
+
 
 ## Portugues BR 🇧🇷
 
