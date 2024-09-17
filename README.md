@@ -1,5 +1,5 @@
 # Projeto de Frameworks para as aulas na Faculdade Impacta
-O site foi inspirado e baseado por: <a href="https://www.alternazero.com/">Alternazero</a>
+O site foi inspirado e baseado em: <a href="https://www.alternazero.com/">Alternazero</a>
 
 <img src="https://cdn-icons-png.flaticon.com/512/1082/1082458.png" height="20"> Atenção!! Este site foi projetado na resolução de 1366x768 e resoluções mobile.
 Caso tenha algumas resoluções acima com alguns problemas, me avise na aba "Issues" <br><br>
