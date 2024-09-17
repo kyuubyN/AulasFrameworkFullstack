@@ -1,6 +1,9 @@
 # Projeto de Frameworks para as aulas na Faculdade Impacta
 O site foi inspirado e baseado por: <a href="https://www.alternazero.com/">Alternazero</a>
 
+<img src="https://cdn-icons-png.flaticon.com/512/1082/1082458.png" height="20"> Atenção!! Este site foi projetado na resolução de 1366x768 e resoluções mobile.
+Caso tenha algumas resoluções acima com alguns problemas, me avise na aba "Issues"
+
 ## Portugues BR 🇧🇷
 
 ### Ferramentas utilizadas na construção do projeto:
@@ -133,5 +136,17 @@ Step 10: Click in the "Localhost" link</code>
 ## Telas/Panels:
 
 <div>
-  
+    <img src="panels/Captura de Tela (3).png">
+    <img src="panels/Captura de Tela (4).png">
+    <img src="panels/Captura de Tela (5).png">
+    <img src="panels/Captura de Tela (6).png">
+    <img src="panels/Captura de Tela (7).png">
+    <img src="panels/Captura de Tela (8).png">
+    <img src="panels/Captura de Tela (9).png">
+    <img src="panels/Captura de Tela (10).png">
+    <img src="panels/Captura de Tela (11).png">
+    <img src="panels/Captura de Tela (12).png">
+    <img src="panels/Captura de Tela (13).png">
+    <img src="panels/Captura de Tela (14).png">
+    <img src="panels/Captura de Tela (15).png">
 </div>
