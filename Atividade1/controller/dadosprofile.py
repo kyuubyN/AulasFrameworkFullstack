@@ -8,7 +8,7 @@ endereco = []
 def data():
     if len(endereco) > 0 and "id" in endereco[0]:
         del endereco[0]
-        print("PAMONHA")
+        print("Funcionou")
     else: 
         pass
     cep = request.form.get("cep")
